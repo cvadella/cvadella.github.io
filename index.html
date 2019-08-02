@@ -2,25 +2,15 @@
 <html>
     <head>
         <script>
-            
-            var acc = document.getElementsByClassName("accordion");
-              var i;
-
-                for (i = 0; i < acc.length; i++) {
-                  acc[i].addEventListener("click", function() {
-                    /* Toggle between adding and removing the "active" class,
-                    to highlight the button that controls the panel */
-                    this.classList.toggle("active");
-
-                    /* Toggle between hiding and showing the active panel */
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block") {
-                      panel.style.display = "none";
-                    } else {
-                      panel.style.display = "block";
-                    }
-                  });
-                }
+            // Hide all elements with class="containerTab", except for the one that matches the clickable grid column
+            function openTab(tabName) {
+              var i, x;
+              x = document.getElementsByClassName("containerTab");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              document.getElementById(tabName).style.display = "block";
+            }
             
             
             function openPage(pageName, elmnt, color) {
@@ -73,6 +63,39 @@
             document.getElementById("defaultOpen").click();
         </script>
         <style>
+            /* The grid: Three equal columns that floats next to each other */
+            .column {
+              float: left;
+              width: 33.33%;
+              padding: 50px;
+              text-align: center;
+              font-size: 25px;
+              cursor: pointer;
+              color: white;
+            }
+
+            .containerTab {
+              padding: 20px;
+              color: white;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+            /* Closable button inside the image */
+            .closebtn {
+              float: right;
+              color: white;
+              font-size: 35px;
+              cursor: pointer;
+            }
+
+            
+            
             /* Style the buttons that are used to open and close the accordion panel */
             .accordion {
               background-color: #eee;
@@ -151,7 +174,34 @@
     <div id="Home" class="tabcontent">
       <button class="accordion">Games</button>
         <div class="panel">
-          Hi
+            
+        <!-- The grid: three columns -->
+            <div class="row">
+              <div class="column" onclick="openTab('b1');" style="background:green;">Box 1</div>
+              <div class="column" onclick="openTab('b2');" style="background:blue;">Box 2</div>
+              <div class="column" onclick="openTab('b3');" style="background:red;">Box 3</div>
+            </div>
+
+            <!-- The expanding grid (hidden by default) -->
+            <div id="b1" class="containerTab" style="display:none;background:green">
+              <!-- If you want the ability to close the container, add a close button -->
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+              <h2>Box 1</h2>
+              <p>Lorem ipsum..</p>
+            </div>
+
+            <div id="b2" class="containerTab" style="display:none;background:blue">
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+              <h2>Box 2</h2>
+              <p>Lorem ipsum..</p>
+            </div>
+
+            <div id="b3" class="containerTab" style="display:none;background:red">
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+              <h2>Box 3</h2>
+              <p>Lorem ipsum..</p>
+            </div>
+            
         </div>
 
         <button class="accordion">Event Planning</button>
