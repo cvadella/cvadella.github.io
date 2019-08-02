@@ -27,24 +27,42 @@
             document.getElementById("defaultOpen").click();
         </script>
         <style>
-            body {
-                background-color: slategrey;
+            /* Set height of body and the document to 100% to enable "full page tabs" */
+            body, html {
+              height: 100%;
+              margin: 0;
+              font-family: Arial;
             }
-            nameHeader{
-                font-color: white;
-                font-size: 36pt;
-                float: center;
-                margin-top:5%; 
-                margin-bottom: 15pt; 
-                width:66%;
+
+            /* Style tab links */
+            .tablink {
+              background-color: #555;
+              color: white;
+              float: left;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 14px 16px;
+              font-size: 17px;
+              width: 25%;
             }
-            h2{
-                font-color: linen;
-                font-size: 20pt;
-                float: center;
-                margin-bottom: 10pt; 
-                width:85%;
+
+            .tablink:hover {
+              background-color: #777;
             }
+
+            /* Style the tab content (and add height:100% for full page content) */
+            .tabcontent {
+              color: white;
+              display: none;
+              padding: 100px 20px;
+              height: 100%;
+            }
+
+            #Home {background-color: red;}
+            #News {background-color: green;}
+            #Contact {background-color: blue;}
+            #About {background-color: orange;}
         </style>
     </head>
 <body>
