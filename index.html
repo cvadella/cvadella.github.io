@@ -2,10 +2,6 @@
 <html>
     <head>
         <script>
-            
-            
-            
-            
             function openPage(pageName, elmnt, color) {
               // Hide all elements with class="tabcontent" by default */
               var i, tabcontent, tablinks;
@@ -27,29 +23,27 @@
               elmnt.style.backgroundColor = color;
                 
               var acc = document.getElementsByClassName("accordion");
-            var i;
+                var i;
 
-            for (i = 0; i < acc.length; i++) {
-              acc[i].addEventListener("click", function() {
-                /* Toggle between adding and removing the "active" class,
-                to highlight the button that controls the panel */
-                this.classList.toggle("active");
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
 
-                /* Toggle between hiding and showing the active panel */
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                  panel.style.display = "none";
-                } else {
-                  panel.style.display = "block";
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                      panel.style.display = "none";
+                    } else {
+                      panel.style.display = "block";
+                    }
+                  });
                 }
-              });
+                
+                
+                
             }
-            }
-            
-        
-            
-            
-
             // Get the element with id="defaultOpen" and click on it
             document.getElementById("openThis").click();
         </script>
@@ -144,54 +138,19 @@
     <button class="tablink" onclick="openPage('About', this, 'orange')"id="openThis">About + Contact</button>
 
     <div id="Home" class="tabcontent">
-        <div class="row">
-          <div class="column">
-                    <video width="320" height="240" controls>
-                      <source src="2 Day Shipping Trailer.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video>
-          </div>
-          <div class="column">
-            Lorem ipsum...
-          </div>
-        </div>
+        hi
     </div>
 
     <div id="News" class="tabcontent">
+        hi
     </div>
 
     <div id="Contact" class="tabcontent">
-        <h3>Music</h3>
-        <audio controls>
-          <source src="rainingFromTheCar.wav" type="audio/wav">
-        Your browser does not support the audio element.
-        </audio>
-        <audio controls>
-          <source src="rockBand.wav" type="audio/wav">
-        Your browser does not support the audio element.
-        </audio>
-        <audio controls>
-          <source src="adventuring.wav" type="audio/wav">
-        Your browser does not support the audio element.
-        </audio>
-        <h3>Art</h3>
-        <div class="row">
-          <div class="column">
-                <img src="lalaBerlin.PNG" alt="Blonde girl, black sweater with rainbow lettering">
-                <img src="mabel.PNG" alt="Mabel from Gravity Falls">
-          </div>
-          <div class="column">
-            <img src="burgerKing.PNG" alt="Cutesy mascot for Burger King">
-            <img src="stardewChickens.png" alt="Two chickens">
-          </div>
+        hi
     </div>
 
     <div id="About" class="tabcontent">
-      <h3>About</h3>
-       <button class="accordion">Resume</button>
-        <div class="panel">
-            <embed src="resume.pdf" style="float:center; width:65%; width="5000"; height="500"; margin-left: 17.5%; margin-right: 17.5%>
-        </div>
+        hi
     </div>
 </body>
 </html>
