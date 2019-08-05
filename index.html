@@ -27,6 +27,17 @@
             document.getElementById("openThis").click();
         </script>
         <style>
+            .column {
+              float: left;
+              width: 50%;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
             /* Set height of body and the document to 100% to enable "full page tabs" */
             body, html {
               height: 100%;
@@ -78,10 +89,14 @@
     <button class="tablink" onclick="openPage('About', this, 'orange')"id="openThis">About + Contact</button>
 
     <div id="Home" class="tabcontent">
-        <video width="320" height="240" controls>
-          <source src="2 Day Shipping Trailer.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-        </video>
+        <div class="row">
+          <div class="column"></div>
+                    <video width="320" height="240" controls>
+                      <source src="2 Day Shipping Trailer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+          <div class="column"></div>
+        </div>
     </div>
 
     <div id="News" class="tabcontent">
