@@ -91,12 +91,11 @@
             body, html {
               height: 100%;
               font-family: Arial;
-              background-color: #696969;
             }
 
             /* Style tab links */
             .tablink {
-              background-color: #778899;
+              background-color: #555;
               color: white;
               float: left;
               border: none;
@@ -108,7 +107,7 @@
             }
 
             .tablink:hover {
-              background-color: #b0c4de;
+              background-color: #777;
             }
 
             /* Style the tab content (and add height:100% for full page content) */
@@ -121,10 +120,10 @@
               margin: auto;
             }
 
-            #Home {background-color: #d3d3d3;}
-            #News {background-color: #d3d3d3;}
-            #Contact {background-color: #d3d3d3;}
-            #About {background-color: #d3d3d3;}
+            #Home {background-color: red;}
+            #News {background-color: green;}
+            #Contact {background-color: blue;}
+            #About {background-color: orange;}
         </style>
     </head>
 <body>
@@ -133,25 +132,60 @@
         <h1>Carissa Vadella</h1>
     </header>
     
-    <button class="tablink" onclick="openPage('Home', this, '#d3d3d3')">Games</button>
-    <button class="tablink" onclick="openPage('News', this, '#d3d3d3')">Event Planning</button>
-    <button class="tablink" onclick="openPage('Contact', this, '#d3d3d3')">Other Work</button>
-    <button class="tablink" onclick="openPage('About', this, '#d3d3d3')"id="openThis">About + Contact</button>
+    <button class="tablink" onclick="openPage('Home', this, 'red')">Games</button>
+    <button class="tablink" onclick="openPage('News', this, 'green')">Event Planning</button>
+    <button class="tablink" onclick="openPage('Contact', this, 'blue')">Other Work</button>
+    <button class="tablink" onclick="openPage('About', this, 'orange')"id="openThis">About + Contact</button>
 
     <div id="Home" class="tabcontent">
-        hi
+        <div class="row">
+          <div class="column">
+                    <video width="320" height="240" controls>
+                      <source src="2 Day Shipping Trailer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+          </div>
+          <div class="column">
+            Lorem ipsum...
+          </div>
+        </div>
     </div>
 
     <div id="News" class="tabcontent">
-        hi
     </div>
 
     <div id="Contact" class="tabcontent">
-        hi
+        <h3>Music</h3>
+        <audio controls>
+          <source src="rainingFromTheCar.wav" type="audio/wav">
+        Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+          <source src="rockBand.wav" type="audio/wav">
+        Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+          <source src="adventuring.wav" type="audio/wav">
+        Your browser does not support the audio element.
+        </audio>
+        <h3>Art</h3>
+        <div class="row">
+          <div class="column">
+                <img src="lalaBerlin.PNG" alt="Blonde girl, black sweater with rainbow lettering">
+                <img src="mabel.PNG" alt="Mabel from Gravity Falls">
+          </div>
+          <div class="column">
+            <img src="burgerKing.PNG" alt="Cutesy mascot for Burger King">
+            <img src="stardewChickens.png" alt="Two chickens">
+          </div>
     </div>
 
     <div id="About" class="tabcontent">
-        hi
+      <h3>About</h3>
+       <button class="accordion">Resume</button>
+        <div class="panel">
+            <embed src="resume.pdf" style="float:center; width:65%; width="5000"; height="500"; margin-left: 17.5%; margin-right: 17.5%>
+        </div>
     </div>
 </body>
 </html>
